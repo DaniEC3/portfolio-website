@@ -50,6 +50,11 @@ header {
   border-bottom:  4px solid black;
 }
 
+header img {
+  width: 300px;
+  height: auto;
+}
+
 li a{
   color: var(--link-header-color);
 
@@ -99,6 +104,21 @@ li a{
 
 
 /*INDEX*/
+
+.profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 150px auto;
+}
+
+.index-text{
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+
+}
 
 button, .button {
   /* overwrites browser defaults and resets the border */
@@ -157,13 +177,6 @@ button:focus,
 
 }
 
-.profile {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 15%;
-}
-
 .profile__portrait {
   float: left;
   width: 300px;
@@ -192,10 +205,17 @@ margin:25px auto;
 
 .inf-links{
   color: #357b70;
+}
 
+.form-style{
+  margin: 10px;
 }
 
 /*WORK*/
+
+#work-title {
+  text-align: center;
+}
 
 /* start grid fallback */
 .grid__item {
@@ -253,23 +273,6 @@ button:focus,
   opacity: 0.8;
 }
 
-/*SMALL DEVICES*/
-
-@media all and (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-  .grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-  h1 {
-    font-size: 22px;
-  }
-}
-
-
 /*MEDIUM DEVICES*/
 
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -284,6 +287,47 @@ button:focus,
   h1 {
     font-size: 22px;
   }
+  header img {
+    width: 150px;
+    height: 80px;
+  }
+  .profile{
+  flex-direction: column;
+  margin: 100px auto;
+
+  }
+  .profile__portrait {
+    margin-right: 0px;
+  }
+}
+
+/*SMALL DEVICES*/
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+
+  header img {
+    width: 150px;
+    height: 80px;
+  }
+  .profile{
+    flex-direction: column;
+    margin: 100px auto;
+  }
+  .profile__portrait {
+    margin-right: 0px;
+  }
+
 }
 
 /*ANIMATIONS*/
